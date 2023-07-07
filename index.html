@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="4.png" type="image/x-icon">
+    <title>Merry Go</title>
+</head>
+<body onload="initClock()">
+    
+    <div class="overlay" onclick="off()"></div>
+
+    <video autoplay muted loop id="myVideo" onclick="off()">
+        <source src="1.mp4" type="video/mp4">
+    </video>
+
+    <div class="header" onclick="off()">
+        <div class="a">
+            <a href="https://en.wikipedia.org/wiki/One_Piece"><img alt="error" src="7.png"></a>
+        </div>
+
+        <div class="search" onclick="off()">
+            <form action="https://www.google.com/search" method="get" class="search-bar">
+                <input type="text" placeholder="Search" name="q" autofocus>
+                <button type="submit"><img alt="error" src="search.png" title="Search"></button>
+            </form>
+        </div>
+        
+        <div class="container">
+            <a href="https://animesuge.to/home/" class="tile" title="Anime">
+                <div class="tile-icon">
+                    <img alt="error" src="9.jpg" draggable="falses">
+                </div>
+                <div class="tile-title">
+                    <span>Anime</span>
+                </div>
+            </a>
+            <a href="https://aniwatch.to/home/" class="tile" title="Anime">
+                <div class="tile-icon">
+                    <img alt="error" src="10.png" draggable="falses">
+                </div>
+                <div class="tile-title">
+                    <span>Anime</span>
+                </div>
+            </a>
+            <a href="https://readm.org/" class="tile" title="Manga">
+                <div class="tile-icon">
+                    <img alt="error" src="15.jpg" draggable="falses">
+                </div>
+                <div class="tile-title">
+                    <span>Manga</span>
+                </div>
+            </a>
+            <a href="https://www.youtube.com/" class="tile" title="YouTube">
+                <div class="tile-icon">
+                    <img alt="error" src="11.png" draggable="falses">
+                </div>
+                <div class="tile-title">
+                    <span>YouTube</span>
+                </div>
+            </a>
+            <a href="https://www2.showbox-movies.net/country/IN" class="tile" title="Movie">
+                <div class="tile-icon">
+                    <img alt="error" src="12.png" draggable="falses">
+                </div>
+                <div class="tile-title">
+                    <span>Movie</span>
+                </div>
+            </a>
+            <a href="https://discord.com/" class="tile" title="Discord">
+                <div class="tile-icon">
+                    <img alt="error" src="17.jpg" draggable="false">
+                </div>
+                <div class="tile-title">
+                    <span>Discord</span>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" class="tile" title="Instagram">
+                <div class="tile-icon">
+                    <img alt="error" src="13.jpg" draggable="falses">
+                </div>
+                <div class="tile-title">
+                    <span>Instagram</span>
+                </div>
+            </a>
+            <a href="https://web.whatsapp.com/" class="tile" title="WhatsApp">
+                <div class="tile-icon">
+                    <img alt="error" src="16.jpg" draggable="falses">
+                </div>
+                <div class="tile-title">
+                    <span>WhatsApp</span>
+                </div>
+            </a>
+            <a href="https://store.epicgames.com/en-US/" class="tile" title="Epic Games">
+                <div class="tile-icon">
+                    <img alt="error" src="14.jpg" draggable="falses">
+                </div>
+                <div class="tile-title">
+                    <span>Epic Games</span>
+                </div>
+            </a>
+            <a href="https://store.steampowered.com/" class="tile" title="Steam">
+                <div class="tile-icon">
+                    <img alt="error" src="18.jpg" draggable="falses">
+                </div>
+                <div class="tile-title">
+                    <span>Steam</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="pro">
+        <span class="edit">
+            <a href="https://www.instagram.com/_.ken_k_/" title="_.ken_k_"><i class='bx bxl-instagram'></i></a>
+        </span>
+        <span class="edit">
+            <a href="https://discord.gg/QzeZ3haT" title="Kaneki Ken"><i class='bx bxl-discord' ></i></a>
+        </span>
+        <span class="edit">
+            <a href="https://www.facebook.com/profile.php?id=100014608938403" title="Kaneki Ken"><i class='bx bxl-facebook-square'></i></a>
+        </span>
+    </div>
+
+    <div class="clock" onclick="off()">
+        <div class="time">
+           <span id="hour">00</span>:
+           <span id="min">00</span>
+           <span id="sec">00</span>
+        </div>
+        <div class="c-time">
+           <span id="day">Day</span>,
+           <span id="month">Month</span>,
+           <span id="date">00</span>,
+           <span id="year">Year</span>
+        </div>
+    </div>
+
+    <nav class="sidebar">
+        <div class="sidebar-inner">
+            <header class="sidebar-header">
+                <button type="button" class="sidebar-burger" onclick="toggleSidebar()">
+                    <img alt="error" src="4.png" alt="error" draggable="false">
+                </button>
+                <a href="https://animesuge.to/anime/one-piece-ov8/">
+                    <img alt="error" src="7.png" class="sidebar-logo">
+                </a>
+            </header>
+            <nav class="sidebar-menu">
+                <a href="https://myaccount.google.com/?utm_source=OGB&utm_medium=app" title="Accounts">
+                    <button type="button">
+                        <i class='bx bx-user'></i>
+                        <span>Accounts</span>
+                    </button>
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" title="Gmail">
+                    <button type="button">
+                        <i class='bx bx-envelope' ></i>
+                        <span>Gmail</span>
+                    </button>
+                </a>
+                <a href="https://meet.google.com/?hs=197&authuser=0" title="Meet">
+                    <button type="button">
+                        <i class='bx bx-video'></i>
+                        <span>Meet</span>
+                    </button>
+                </a>
+                <a href="https://drive.google.com/drive/u/0/my-drive" title="Drive">
+                    <button type="button">
+                        <i class='bx bx-hdd' ></i>
+                        <span>Drive</span>
+                    </button>
+                </a>
+                <a href="https://photos.google.com/" title="Photos">
+                    <button type="button">
+                        <i class='bx bx-photo-album' ></i>
+                        <span>Photos</span>
+                    </button>
+                </a>
+                <a href="https://translate.google.com/" title="Translate">
+                    <button type="button">
+                        <i class="fa fa-language"></i>
+                        <span>Translate</span>
+                    </button>
+                </a>
+                <a class="web" href="https://chrome.google.com/webstore/category/extensions?utm_source=app-launcher&authuser=0" title="Web Store">
+                    <button type="button">
+                        <i class='bx bx-store' ></i>
+                        <span>Web Store</span>
+                    </button>
+                </a>
+                <a class="app" href="https://play.google.com/" title="Play Store">
+                    <button type="button">
+                        <i class='bx bxl-play-store'></i>
+                        <span>Play Store</span>
+                    </button>
+                </a>
+
+                <div class="pro2">
+                    <span class="edit">
+                        <a href="https://www.instagram.com/_.ken_k_/" title="_.ken_k_"><i class='bx bxl-instagram'></i></a>
+                    </span>
+                    <span class="edit">
+                        <a href="https://discord.gg/QzeZ3haT" title="Kaneki Ken"><i class='bx bxl-discord' ></i></a>
+                    </span>
+                    <span class="edit">
+                        <a href="https://www.facebook.com/profile.php?id=100014608938403" title="Kaneki Ken"><i class='bx bxl-facebook-square'></i></a>
+                    </span>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+    <script src="index.js"></script>
+</body>
+</html>

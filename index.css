@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Caveat', cursive;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay{
+    position: fixed;
+    background: url(3.jpg);
+    background-size: 1536px 745px;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#myVideo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1536px;
+}
+
+/* LOGO */
+
+.a{
+    position: relative;
+    text-align: right;
+    margin: 1.875rem;
+    cursor: default;
+}
+
+.a img{
+    width: 15.75rem;
+}
+
+/* SEARCH BAR */
+
+.search{
+    display: flex;
+    position: relative;
+    margin-top: 180px;
+    justify-content: center;
+    padding: 0;
+}
+
+.search input::-webkit-input-placeholder{
+    opacity: 0.5;
+}
+
+.search-bar{
+    width: 37.5rem;
+    display: flex;
+    height: 3.125rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 0.625rem 1.25rem;
+    border-bottom: 3px solid snow;
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.625rem 0.625rem;
+    font-size: 1.25rem;
+    color: whitesmoke;
+}
+
+::placeholder{
+    color: whitesmoke;
+}
+
+.search-bar button img{
+    width: 1.5625rem;
+}
+
+.search-bar button{
+    border: none;
+    cursor: pointer;
+}
+
+/* SHORT_CUT */
+
+.container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 30px;
+    padding: 2px;
+}
+
+.tile{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.tile-icon img{
+    width: 47px;
+    border-radius: 12px;
+    transition: all 0.2s;
+    aspect-ratio: 1/1;
+}
+
+.tile-icon img:hover{
+    background:rgba(255, 255, 255, 0.6);
+    padding: 3px;
+}
+
+.tile-title{
+    display: flex;
+    text-align: center;
+    color: white;
+    position: absolute;
+    margin-top: 55px;
+    font-size: 12px;
+}
+
+button{
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    position: absolute;
+    overflow: hidden;
+    top: 20px;
+    left: 20px;
+    width: 3.75rem;
+    height: 95%;
+    border-radius: 10px;
+    background: url(1.jpg);
+    transition: all 0.4s;
+    background-size: 15rem;
+}
+
+a button{
+    width: 100%;
+}
+
+body.open .sidebar{
+    width: 15rem;
+}
+
+.sidebar-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18.75rem;
+}
+
+.sidebar-header{
+    display: flex;
+    align-items: center;
+    height: 4.25rem;
+    padding: 0 1.25rem 0 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-left: 0.1875rem solid transparent;
+    transition: all 0.4s;
+}
+
+.sidebar-header img{
+    border-radius: 1.875rem;
+    height: 2.8125rem;
+}
+
+.sidebar-header:hover{
+    border-left: 0.1875rem solid #bdbdbd;
+}
+
+.sidebar-burger{
+    width: 3.4375rem;
+    display: grid;
+    place-items: center;
+}
+
+body.open .sidebar-burger img{
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+.sidebar-burger img{
+    transition: all 0.4s;
+}
+
+.sidebar-logo{
+    opacity: 0;
+    margin-left: 1.875rem;
+    transition: all 0.4s;
+}
+
+body.open .sidebar-logo{
+    opacity: 1;
+}
+
+.sidebar-menu{
+    display: grid;
+}
+
+a{
+    text-decoration: none;
+}
+
+a > button{
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    height: 3.4375rem;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: inherit;
+    letter-spacing: 0.125rem;
+    line-height: 1;
+    padding: 0 1.1rem;
+    transition: all 0.4s;
+}
+
+a > button:hover{
+    background:rgba(255,255,255, 0.2);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: 10px;
+}
+
+a > button > i{
+    font-size: 1.5625rem;
+    color: #f9f9f9;
+    transition: all 0.4s;
+}
+
+a > button > span{
+    color: #fafafa;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+body.open a > button > span{
+    opacity: 1;
+}
+
+.app{
+    display: none;
+}
+
+.i{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.clock{
+    position: absolute;
+    top: 3%;
+    left:7%;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    border: 2px solid rgba(253, 253, 253, 0.61);
+    width: 180px;
+    aspect-ratio: 2/1;
+    text-align: center;
+    cursor: default;
+    transition: all 1s;
+}
+
+.time{
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+#sec{
+    font-size: 13px;
+    width: 5px;
+}
+
+.c-time span{
+    font-size: 14px;
+}
+
+.pro{
+    position: absolute;
+    top: 94%;
+    left: 7%;
+}
+
+.edit a{
+    color: #f9f9f9;
+    font-size: 20px;
+}
+
+.pro2{
+    display: none;
+}
+
+@media (max-width:800px){
+
+    body{
+        transition: 1s;
+        overflow-y: visible;
+    }
+
+    .overlay{
+        background: url(sm.jpg);
+        background-size: cover;
+    }    
+
+    .a{
+        text-align: right;
+        transition: 0.2s;
+        margin: 10px;
+        transition: 1s;
+    }
+
+    .a img{
+        width: 180px;
+        padding: 0;
+    }
+
+    video{
+        display: none;
+    }
+
+    .search{
+        display: flex;
+        top: 20%;
+        left: 10%;
+        width: 80%;
+        transition: 1s;
+    }
+
+    .sidebar{
+        top: 12px;
+        left: 10px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .open .sidebar{
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .sidebar-burger{
+        margin-top: -8px;
+    }
+
+    .open .sidebar-burger{
+        margin-top: 0;
+    }
+
+    .web{
+        display: none;
+    }
+
+    .app{
+        display: block;
+    }
+
+    .tile-icon img{
+        width: 47px;
+        border-radius: 15px;
+    }
+
+    .container{
+        gap: 30px 18px;
+    }
+
+    .tile-title{
+        margin-top: 55px;
+        font-size: 13px;
+        transition: 1s;
+    }
+
+    .pro{
+        display: none;
+    }
+
+    .clock{
+        display: flex;
+        flex-direction: column;
+        top: 15%;
+        width: 120px;
+    }
+
+    .time{
+        font-size: 22px;
+        padding-top: 8px;
+    }
+    
+    #sec{
+        font-size: 10px;
+        width: 3px;
+    }
+    
+    .c-time span{
+        font-size: 12px;
+    }
+
+    .pro2{
+        display: block;
+        margin: 20px;
+        margin-top: 40px;
+    }
+}
